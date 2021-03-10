@@ -1,2 +1,76 @@
-$pop = 'Poppins', sans-serif;
-$arca = 'Arca Majora 3', sans-serif;
+$pop: 'Poppins', sans-serif;
+$arca: 'Arca Majora 3', sans-serif;
+
+body {
+  color: $black;
+  font-family: $pop;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.container {
+  &.--hfull {
+    height: 100%;
+  }
+}
+
+h1 {
+  font-size: 94px;
+  font-family: $arca;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 18px;
+  color: $silver;
+  margin-top: 0;
+}
+
+
+
+//=================
+.lineitems {
+  background-color: $white;
+  height: 56px;
+  border-radius: 56px;
+  display: flex;
+  overflow: hidden;
+
+  &__content {
+    flex: 1;
+  }
+
+  &__btn {
+    button {
+      border-radius: 0;
+      border: 0;
+      padding: 0 30px;
+
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: $green;
+      transition: .2s;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: $green-hover;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+  }
+}

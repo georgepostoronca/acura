@@ -1,0 +1,34 @@
+.header {
+  min-height: 100vh;
+  background-size: cover;
+  background: url("../img/head-bg.jpg") center bottom;
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background: url("../img/head-bg@2x.jpg") center bottom;
+  }
+
+  .container {
+    min-height: inherit;
+  }
+
+  &__wrap {
+    min-height: inherit;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: #fff;
+    line-height: 1;
+  }
+
+  p {
+    font-size: rem(22);
+    color: $white;
+  }
+}
