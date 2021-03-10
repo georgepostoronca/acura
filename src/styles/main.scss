@@ -1,3 +1,5 @@
+@import "../../node_modules/slim-select/dist/slimselect";
+
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
@@ -7,3 +9,4 @@
 @import "base/grid";
 @import "../blocks/components/components";
 @import "../blocks/modules/modules";
+

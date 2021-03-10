@@ -9,7 +9,10 @@
     background: url("../img/head-bg@2x.jpg") center bottom;
   }
 
-  .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .container, .container-fluid {
     min-height: inherit;
   }
 
@@ -28,7 +31,60 @@
   }
 
   p {
-    font-size: rem(22);
+    font-size: 22px;
     color: $white;
+
+    @media(max-width: $xl) {
+      font-size: 18px;
+    }
+
+    @media(max-width: $lg) {
+      font-size: 16px;
+    }
+  }
+
+  .lineitems {
+    width: 81%;
+    margin-top: 33px;
+
+    @media(max-width: $xl) {
+      width: 100%;
+    }
+
+    @media(max-width: $md) {
+      width: 340px;
+      margin-top: 10px;
+    }
+
+    @media(max-width: $sm) {
+      width: 280px;
+    }
+
+    &__section {
+      width: 33.333%;
+
+      @media(max-width: $md) {
+        width: 100%;
+      }
+    }
+  }
+
+  .ss-main {
+    width: 100%;
+
+    .ss-single-selected {
+      @media(max-width: $md) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+
+    .ss-content {
+      margin-top: 11px;
+
+      @media(max-width: $md) {
+        margin-top: 0;
+      }
+    }
   }
 }
