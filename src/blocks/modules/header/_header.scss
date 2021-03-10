@@ -2,27 +2,31 @@
   min-height: 100vh;
   background-size: cover;
   background: url("../img/head-bg.jpg") center bottom;
+  background-repeat: no-repeat;
 
   @media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     background: url("../img/head-bg@2x.jpg") center bottom;
   }
 
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 110px;
+
+  display: flex;
+  align-items: center;
 
   .container, .container-fluid {
-    min-height: inherit;
   }
 
   &__wrap {
-    min-height: inherit;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   h1 {

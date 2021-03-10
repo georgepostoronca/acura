@@ -1,0 +1,28 @@
+.menu
+    .container-fluid
+        .menu__wrap
+            //Logo
+            .menu__logo
+                img(src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo")
+
+            //Nav
+            nav.menu__nav.js-nav
+                ul
+                    li
+                        a(href="#home").active home
+                    li
+                        a(href="#auctions") auctions
+                    li
+                        a(href="#blog") blog
+                    li
+                        a(href="#contact") contact us
+
+            //Control
+            .menu__control
+                a(href="#LOGIN") LOGIN
+                a.btn.--min
+                    span Register
+
+                .menu__btn.js-toggle-nav
+                    .menu__btn-wrap
+                        span

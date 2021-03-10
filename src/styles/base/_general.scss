@@ -7,6 +7,12 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  * {
+    box-sizing: inherit;
+  }
 }
 
 .container {
@@ -241,3 +247,51 @@ p {
   }
 }
 
+
+//=================
+.btn {
+  outline: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 52px;
+
+  background-color: $green;
+  border: 0;
+
+  transition: .2s;
+
+  min-width: 194px;
+  height: 52px;
+
+  padding: 10px;
+
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow: 0 2px 4px 0 rgba($black, .3);
+
+  &.--min {
+    min-width: 170px;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: $arca;
+    color: $white;
+    text-align: center;
+
+    position: relative;
+    top: 1px;
+  }
+
+  &:hover {
+    background-color: $green-hover;
+    box-shadow: 0 0 0 0 rgba($black, .3);
+  }
+}
