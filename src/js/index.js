@@ -12,22 +12,25 @@ selects.forEach((item) => {
 })
 
 // Fixed Scroll
-let menu = document.querySelector(".menu")
-if(menu) {
-  document.addEventListener("scroll", debounce((ev) => {
-    console.log(ev, window.scrollY)
+let menu = document.querySelector(".menu");
 
-    if(window.scrollY > 10) {
-      menu.classList.add("--fixed");
-    } else {
-      menu.classList.remove("--fixed");
-    }
-  }, 10));
+function toggleMenuFixed() {
+  if(window.scrollY > 10) {
+    menu.classList.add("--fixed");
+  } else {
+    menu.classList.remove("--fixed");
+  }
+}
+toggleMenuFixed();
+
+if(menu) {
+  document.addEventListener("scroll", debounce(toggleMenuFixed, 10));
 }
 
 // Toggle Menu
 let navEl = document.querySelector(".js-nav");
 let navBtnEl = document.querySelector(".js-toggle-nav");
+
 if(navBtnEl) {
   navBtnEl.addEventListener("click", (e) => {
     e.target.classList.toggle("--active")

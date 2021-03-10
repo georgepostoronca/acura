@@ -1,5 +1,6 @@
 $pop: 'Poppins', sans-serif;
 $arca: 'Arca Majora 3', sans-serif;
+$nunito: 'Nunito Sans', sans-serif;
 
 body {
   color: $black;
@@ -41,6 +42,22 @@ h1 {
 
   @media(max-width: $md) {
     font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 47px;
+  font-family: $arca;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-top: 0;
+
+  @media(max-width: $lg) {
+    font-size: 40px;
+  }
+
+  @media(max-width: $md) {
+    font-size: 28px;
   }
 }
 
@@ -126,9 +143,45 @@ p {
     }
   }
 
+  &__radio {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+
+      &:checked + label {
+        span {
+          color: $green;
+        }
+      }
+    }
+
+    label {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media(max-width: $md) {
+        padding: 10px 0;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+
   &__btn {
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
 
     @media(max-width: $md) {
       width: 100%;
@@ -158,6 +211,17 @@ p {
       //margin-left: -2px;
       //background-color: $white;
       //border-radius: 0% 100% 100% 0% / 50% 50% 50% 50%;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: $arca;
+      margin-right: 13px;
+      color: $white;
+      position: relative;
+      top: 2px;
     }
 
     button {
@@ -292,6 +356,24 @@ p {
 
   &.--min {
     min-width: 170px;
+  }
+
+  &.--white {
+    background-color: $white;
+
+    span {
+      color: $black;
+    }
+
+    &:hover {
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &.--middle {
+    min-width: 189px;
   }
 
   span {

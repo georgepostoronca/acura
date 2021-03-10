@@ -1,0 +1,182 @@
+.perfectcar {
+  background-color: #f7f7f7;
+
+  padding-bottom: 112px;
+
+  @media(max-width: $lg) {
+    padding-bottom: 80px;
+  }
+
+  @media(max-width: $md) {
+    padding-bottom: 30px;
+  }
+
+  &__wrap {
+    padding-top: 109px;
+
+    @media(max-width: $lg) {
+      padding-top: 80px;
+    }
+
+    @media(max-width: $md) {
+      padding-top: 30px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 66px;
+
+    @media(max-width: $lg) {
+      margin-bottom: 40px;
+    }
+
+    @media(max-width: $md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .lineitems {
+    width: 85.6%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px 0 rgba($black, .3);
+    margin-bottom: 54px;
+
+    @media(max-width: $xl) {
+      width: 100%;
+    }
+
+    @media(max-width: $md) {
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      @media(max-width: $md) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+
+    &__section {
+      @media(max-width: $md) and(min-width: $sm + 1) {
+        //width: 50%;
+
+        &:not(:last-child) {
+          border-right: 1px solid #e5e5e5;
+        }
+      }
+
+      @media(max-width: $sm) {
+        width: 50%;
+        flex: initial;
+        border: none;
+
+        &:nth-child(2n - 1) {
+          border-right: 1px solid #e5e5e5;
+        }
+      }
+    }
+  }
+
+
+  &__grid {
+
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}
+
+.carblock {
+  border-radius: 10px;
+  background-color: $white;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  picture {
+    width: 100%;
+    height: 210px;
+    display: block;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .label {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    padding: 30px 5px 14px;
+
+    span {
+      font-size: 14px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 4px;
+
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    b {
+      font-weight: bold;
+      font-size: 26px;
+      display: block;
+      margin-bottom: 25px;
+
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .btn {
+      margin-bottom: 43px;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        text-align: center;
+        padding: 0 3px;
+        flex: 1 0 auto;
+
+        &:not(:last-child) {
+          border-right: 1px solid #bfbfbf;
+        }
+
+        span {
+          font-family: $nunito;
+          font-size: 10px;
+          color: #6d6d6d;
+        }
+      }
+    }
+  }
+}
+
+.label {
+  background-color: $red;
+  border-radius: 5px;
+  color: $white;
+  display: inline-block;
+
+  font-size: 12px;
+  padding: 10px;
+}
