@@ -77,6 +77,19 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 22px;
+  font-family: $arca;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-top: 0;
+  text-transform: uppercase;
+
+  @media(max-width: $lg) {
+    font-size: 18px;
+  }
+}
+
 p {
   font-size: 18px;
   color: $silver;
@@ -101,6 +114,19 @@ p {
     display: block;
     height: auto;
     border-radius: 20px;
+  }
+
+  &.--min {
+    height: 40px;
+
+    @media (max-width: $md) {
+      height: auto;
+    }
+  }
+
+  &.--min &__content {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   &__content {
@@ -141,6 +167,20 @@ p {
     .ss-main {
       height: 100%;
     }
+
+    input {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      padding-left: 20px;
+      border-radius: 40px 0 0 40px;
+      outline: none;
+
+      @media(max-width: $md) {
+        border-radius: 10px 10px 0 0;
+        height: 50px;
+      }
+    }
   }
 
   &__radio {
@@ -165,6 +205,7 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
 
       @media(max-width: $md) {
         padding: 10px 0;
@@ -173,6 +214,13 @@ p {
       span {
         font-size: 14px;
       }
+    }
+  }
+
+  &.--min &__btn {
+    span {
+      margin-right: 0;
+      color: $white
     }
   }
 
@@ -221,7 +269,7 @@ p {
       margin-right: 13px;
       color: $white;
       position: relative;
-      top: 2px;
+      top: 1px;
     }
 
     button {
